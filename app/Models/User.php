@@ -23,10 +23,11 @@ class User extends Authenticatable
         'password',*/
     //Para Login datos generales + un tipo de usuario Usuario invitado y usuario registrado
     protected $fillable = [
+        'tipo_usuario',
         'name',
         'email',
-        'password',
-        'tipo_usuario'
+        'password'
+
     ];
 
     /**

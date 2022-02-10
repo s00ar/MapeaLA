@@ -20,11 +20,11 @@ class CreatePasswordResetsTable extends Migration
         //Modificacion de datos login con tipo de usuario
         Schema::create('password_resets', function (Blueprint $table) {
             $table->id();
+            $table->boolean('tipo_usuario')->default(0); // 0 = inmobiliaria && 1 = Inquilino
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->boolean('tipo_usuario')->default(0); // 0 = suscriptor && 1 = administrador
             $table->rememberToken();
             $table->timestamps();
 
